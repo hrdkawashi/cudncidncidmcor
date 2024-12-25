@@ -1,0 +1,20 @@
+{
+    "auth_key": "1ApWapzMBu7r3VnZbJ0lt4cVwUQcUHhXGAE7QUd-Ej89NXwQK8sr6ST0gxt2zCsAZcvWIMCPhO4uZ4yBe8Fm9ix171ulxvq6E2whB3qG1vEDU1td9gBRNRo2FTkMN8wnTiHiTVtnNlVnmmL4vKMP23Qw2iI3FINhATXPe-htpILrB-yzyi0879X8nrRHyU0lE2L6Hgq6TjevoGLr1aHHp2WLqmTZp4-zDnXaTX_Uvje24HHETd5ZTy47XYUgjE3A15GFZYJ9ilL8Ewd_an7_iSqedVyOA7TOBdcXxMukauP0CL768_UBbHpu3v3KAHIgDHmVmg5qvrvHMdxrs8vY-w6X0zNFeWDE=",
+    "account": {
+        "first_name": "\ud835\udcd4\ud835\udcf5\ud835\udcf2\ud835\udd03\ud835\udcea\ud835\udcff\ud835\udcee\ud835\udcfd\ud835\udcea \ud835\udcd0\ud835\udcf7\ud835\udcf2\ud835\udcfc\ud835\udcf2\ud835\udcf6\ud835\udcf8\ud835\udcff\ud835\udcea",
+        "last_name": null,
+        "user_id": 7782611226,
+        "added_at": 1735061829.824773,
+        "phone_number": "79231031377"
+    },
+    "application": {
+        "api_id": 2040,
+        "api_hash": "b18441a1ff607e10a989891a5462e627",
+        "device_name": "PC 64bit",
+        "app_version": "3.7.3 x64",
+        "sdk": "Linux MATE XWayland glibc 2.34",
+        "lang_pack": "tdesktop",
+        "system_lang_code": "en"
+    },
+    "proxy": null
+}

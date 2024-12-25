@@ -1,0 +1,20 @@
+{
+    "auth_key": "1ApWapzMBu1-wGIbCh61dWtuUVuH7NbzMs5SD9GbMUNFNo6UIa3yl9kSMC_-pP_ERiKP46BmVuRr1hiq-IVaKu_KJpN7d6_GTiRft50W-PwuXu5Ev-WwXWHO-HShtA_rjvYOwrCezXvMcWYSHY4CVn7_tnjeLb14FE-AVc9Y8w8PbIONELcQ9GbGGTDZfFUgx2SKGFXQdL0xDtWNEtsYFKYmJZoz1zQZWzS-pNOMqTIeJuyT8bJdYHVN43VzRA5EpuL7KWBPgcW8OFx6E9pyJYd2ejXRgbrj0cdzwRf9_bN5_AKb6E4-PImdkxUtmxZ7qwWoCj01nvcCg5oTOd-4AqPqwtTBTYKs=",
+    "account": {
+        "first_name": "\ud835\udc03\ud835\udc1a\ud835\udc2c\ud835\udc21\ud835\udc2e\ud835\udc25\ud835\udc22\ud835\udc24 \ud83d\udc8b",
+        "last_name": null,
+        "user_id": 7214555738,
+        "added_at": 1735084648.907515,
+        "phone_number": "79932864605"
+    },
+    "application": {
+        "api_id": 2040,
+        "api_hash": "b18441a1ff607e10a989891a5462e627",
+        "device_name": "PC 64bit",
+        "app_version": "3.1.1 x64",
+        "sdk": "Linux dwm Wayland glibc 2.33",
+        "lang_pack": "tdesktop",
+        "system_lang_code": "ru"
+    },
+    "proxy": null
+}

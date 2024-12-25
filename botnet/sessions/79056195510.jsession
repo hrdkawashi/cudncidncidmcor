@@ -1,0 +1,20 @@
+{
+    "auth_key": "1ApWapzMBuzCkcSOPjTum4S5Kf9WU89zF7Q4aNbWli9aXzeiKqEpgpD_m8Lrld38CLjH1714M3bnnIt8jE_vdEL9VPDcjoo4vcTZVwHSueVnV8PsM7g3mCHu0K1ROfTWOkjFj0MewiP1eCGkHySsj26UJuatuFK_hBCgJki8_R1viIDtZ0sStEOXL8Z_lw7did6VMXDLnnbbDDM0_gb_942n268CB0hoCBMiUr_57z6Qzvcz24bGIYzRnkmsOllzQMPS-EYGlxRddyMpgj66tXdP5ZKOD4HHZxYIzeWUnSsVeVEjNyAwblMLqWaXSqbcW9duz1pTiNGLcKa-x3OhdEM2ZpvEtRgU=",
+    "account": {
+        "first_name": "\u0442\u0432\u043e\u044f \u0441\u0443\u0447\u043a\u0430 \ud83e\udee6",
+        "last_name": null,
+        "user_id": 7401986846,
+        "added_at": 1735084833.242714,
+        "phone_number": "79056195510"
+    },
+    "application": {
+        "api_id": 2040,
+        "api_hash": "b18441a1ff607e10a989891a5462e627",
+        "device_name": "PC 64bit",
+        "app_version": "4.0.2 x64",
+        "sdk": "Linux dwm X11 glibc 2.32",
+        "lang_pack": "tdesktop",
+        "system_lang_code": "cn"
+    },
+    "proxy": null
+}

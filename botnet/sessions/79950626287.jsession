@@ -1,0 +1,26 @@
+{
+    "auth_key": "1ApWapzMBu4h0WV9-XqENU0UtHTW5AAZ7jyj_r0MYx6UwWvOFlkKUupRyp-h2ka26TcRaihmY60knrhI4gO1mnSSlyKyjOLbP1zCVbkAZ0xZBH10JSRgRsICMcQb5fhpdbPlWhwQjrQbdwhsXrY39gTHMsVwaS46cD_K0OL5jF6S7_RwPRpi-jUpS7qTl5l-WQhYJ0oBdOaPM_FF8lLhGP0TmNyhL2u087Bv3l8M9MTdbWiT-rMeRplYl3z2qgblToxUyAUdC9ZPUGL0Tg_KustqvikeG5Fp2mPSDCG-cAQNVYmJ_ZYWWuXYT1N7Euazon2B8445Fyy15ISnQD4tHlRU0Dat7jpo=",
+    "account": {
+        "first_name": "Masha Fact\ud83d\udc8b",
+        "last_name": null,
+        "user_id": 8195482595,
+        "added_at": 1735072113.393844,
+        "phone_number": "79950626287"
+    },
+    "application": {
+        "api_id": 2040,
+        "api_hash": "b18441a1ff607e10a989891a5462e627",
+        "device_name": "PC 64bit",
+        "app_version": "3.1.1 x64",
+        "sdk": "Linux ubuntu X11 glibc 2.35",
+        "lang_pack": "tdesktop",
+        "system_lang_code": "pl"
+    },
+    "proxy": {
+        "proxy_type": "http",
+        "ip": "45.140.211.225",
+        "port": 50100,
+        "user": "rmarushkevych",
+        "password": "uJY6AqdbEI"
+    }
+}

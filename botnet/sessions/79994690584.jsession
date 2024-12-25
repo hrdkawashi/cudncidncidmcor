@@ -1,0 +1,20 @@
+{
+    "auth_key": "1ApWapzMBu2EFJezChvCw3i_qRCyFQyGVDWv0IrM8MJmMzI-dXVSpWWrT-AEL-kqSpNYhUwpdhFuPl24iAfNFjDfi50nioRenQMT_jrlKqDdddvw4GVOQE4Uhc_C5HZY3ImjrTyzheWPeu7F18ZftlD6beNXcUKR-ZH5k1rMCvw14EM1LdCK7YlAN62Rcp9je-NshevX8oVgwpAEPKHlmNNyHYRNV9V86AofX9-TutbdvzpGuPl-1piBVgI5I7Vvx7GKwCia4ywmx9kmOwj2z_bA5kYV1a6p6Fdzarb9Hz2xLealGDpBKEkQVTsa50PTFRfRqWxpwfjoqrtbjf4nihKY4l5SDrHQ=",
+    "account": {
+        "first_name": "apalings 9/11 #blatanet",
+        "last_name": null,
+        "user_id": 7579436379,
+        "added_at": 1735071075.945426,
+        "phone_number": "79994690584"
+    },
+    "application": {
+        "api_id": 2040,
+        "api_hash": "b18441a1ff607e10a989891a5462e627",
+        "device_name": "PC 64bit",
+        "app_version": "3.1.1 x64",
+        "sdk": "Linux GNOME XWayland glibc 2.32",
+        "lang_pack": "tdesktop",
+        "system_lang_code": "ru"
+    },
+    "proxy": null
+}
