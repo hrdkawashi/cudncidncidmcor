@@ -1,9 +1,0 @@
-[sessions]
-api_hash = "32bf0f1fc8b2db53b2e186200dae7ff9"
-api_id = 24624507
-
-[flood]
-messages = [ "ds auculting",]
-delay = [ 2,]
-messages_count = 0
-trigger = "zv"
