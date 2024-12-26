@@ -12,7 +12,7 @@ console = Console()
 
 
 class ChangeProfilePhotoFunc(TelethonFunction):
-    """Изменение фотографии профиля"""
+    """Изменение аватара"""
     
     async def set_profile_photo(self, session: TelegramClient, photo_path: str):
         async with self.storage.ainitialize_session(session):

@@ -8,7 +8,7 @@ from functions.base import TelethonFunction
 console = Console()
 
 class ReportFunc(TelethonFunction):
-    """Пожаловаться о боте/пользователе"""
+    """Жалоба на юзернейм"""
 
     def __init__(self, storage, settings):
         super().__init__(storage, settings)

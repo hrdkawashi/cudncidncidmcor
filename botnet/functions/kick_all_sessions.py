@@ -12,7 +12,7 @@ console = Console()
 
 
 class KickAllSessionsFunc(TelethonFunction):
-    """Выгнать всех пользователей из сессий"""
+    """Снос сессий(.session)"""
     
     async def kick_all_sessions(self, session: TelegramClient):
         async with self.storage.ainitialize_session(session):

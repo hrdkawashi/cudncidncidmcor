@@ -12,7 +12,7 @@ console = Console()
 
 
 class InvitingFunc(TelethonFunction):
-    """Приглашение пользователей из супергруппы"""
+    """Приглашение из чата"""
 
     @staticmethod
     def transform_to_valid_invite(link):

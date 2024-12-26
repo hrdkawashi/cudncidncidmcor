@@ -9,7 +9,7 @@ from functions.base import TelethonFunction
 console = Console()
 
 class SetPasswordFunc(TelethonFunction):
-    """Установить пароль двухэтапной аутентификации для аккаунтов"""
+    """Установить 2ФА(пар)"""
     
     async def edit_2fa(self, session: TelegramClient, password: str):
         async with self.storage.ainitialize_session(session):

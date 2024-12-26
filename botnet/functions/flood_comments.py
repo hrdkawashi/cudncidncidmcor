@@ -9,7 +9,7 @@ console = Console()
 
 
 class CommentsFloodFunc(TelethonFunction):
-    """Спам в комментарии канала"""
+    """Спам в комментарии"""
 
     async def flood(self, session, channel, post_id, media):
         await session.connect()

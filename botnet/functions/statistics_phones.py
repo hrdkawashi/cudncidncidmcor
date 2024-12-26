@@ -13,7 +13,7 @@ console = Console()
 
 
 class PhoneNumbersStatsFunc(TelethonFunction):
-    """Статистика (номера телефонов)"""
+    """Статистика(номера)"""
 
     async def get_phone_number(self, session):
         try:

@@ -2,7 +2,7 @@ from functions.base import TelethonFunction
 from functions.flood import Flood
 
 class FloodFunc(TelethonFunction):
-    """Спам """
+    """Спам"""
 
     def execute(self):
         flood = Flood(self.storage, self.settings)

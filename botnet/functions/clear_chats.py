@@ -10,7 +10,7 @@ console = Console()
 
 
 class ClearDialogsFunc(TelethonFunction):
-    """Очистить все чаты"""
+    """Очистить чаты"""
 
     async def clear(self, session: TelegramClient):
         async with self.storage.ainitialize_session(session):

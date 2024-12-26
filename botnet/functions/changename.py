@@ -11,7 +11,7 @@ console = Console()
 
 
 class ChangeNameFunc(TelethonFunction):
-    """Изменение имен"""
+    """Изменение имени"""
     
     @staticmethod
     def get_random_name(names: List[str]) -> Tuple[str, Optional[str]]:

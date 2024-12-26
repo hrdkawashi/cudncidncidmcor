@@ -1,8 +1,7 @@
 import locale
 import sys
-
+from rich.align import Align
 from rich.console import Console
-
 from modules import updater
 from modules.settings import Settings
 from modules.storages.functions_storage import FunctionsStorage
@@ -10,7 +9,8 @@ from modules.storages.sessions_storage import SessionsStorage
 
 console = Console()
 
-console.print("""
+# ASCII-баннер
+header = """
   ▄▄▄▄███▄▄▄▄    ▄█     ▄████████    ▄████████  ▄█ 
 ▄██▀▀▀███▀▀▀██▄ ███    ███    ███   ███    ███ ███ 
 ███   ███   ███ ███▌   ███    ███   ███    ███ ███▌
@@ -20,14 +20,20 @@ console.print("""
 ███   ███   ███ ███    ███    ███   ███    ███ ███ 
  ▀█   ███   █▀  █▀     ███    ███   ███    █▀  █▀  
                        ███    ███                   
-""")
+"""
+centered_header = Align.center(header)
+console.print(centered_header)
 
-console.print("dev: @auculting")
-console.print("Для покупки приватных функций свяжитесь с [link=https://t.me/eucult]https://t.me/eucult\n")
+console.print("[bold green]Mirai Botnet v1[/]", justify="center")
+console.print(
+    "Для покупки приватных функций свяжитесь с [link=https://t.me/eucult]https://t.me/eucult",
+    justify="center"
+)
 
 if "UTF-8" not in locale.getlocale():
     console.print("[bold yellow]ПРЕДУПРЕЖДЕНИЕ:[/] У вас не установлена кодировка UTF-8. Ботнет может не работать")
 
+# Проверка обновлений
 with console.status("Проверка обновлений..."):
     update = updater.check_update()
 
@@ -45,62 +51,79 @@ if update["has_update"]:
 
     install_choice = console.input("[bold white]Установить? (y/n) >> [/]")
 
-    if install_choice == "y":
+    if install_choice.lower() == "y":
         updater.update(console)
-
-else:
-    console.print("Mirai Botnet v1")
 
 if sys.version_info < (3, 8, 0):
     console.print("\n[red]Ошибка: вы используете устаревшую версию Python. Установите хотя бы Python 3.8.0.")
-else:
-    if sys.platform == "win32":
-        console.print("[yellow]Предупреждение: вы используете Windows. Некоторые функции могут работать некорректно\n")
+    sys.exit(1)
 
-    settings = Settings()
+if sys.platform == "win32":
+    console.print("[yellow]Предупреждение: вы используете Windows. Некоторые функции могут работать некорректно\n")
 
-    sessions_storage = SessionsStorage(
-        "sessions",
-        settings.api_id,
-        settings.api_hash
-    )
+settings = Settings()
 
-    functions_storage = FunctionsStorage(
-        "functions",
-        sessions_storage,
-        settings
-    )
+sessions_storage = SessionsStorage(
+    "sessions",
+    settings.api_id,
+    settings.api_hash
+)
 
-    console.print("[bold white]Количество аккаунтов: %d[/]" % len(sessions_storage))
+functions_storage = FunctionsStorage(
+    "functions",
+    sessions_storage,
+    settings
+)
 
-    for index, module in enumerate(functions_storage.functions):
-        instance, doc = module
+console.print("[bold white]Количество аккаунтов: %d[/]" % len(sessions_storage))
 
-        console.print(
-            "[bold white][{index}] {doc}[/]"
-            .format(index=index + 1, doc=doc)
-        )
+# Формируем список функций из других скриптов
+function_list = []
+for index, (function_name, docstring) in enumerate(functions_storage.functions):
+    function_list.append(f"[{index + 1}] {docstring}")
 
-    while True:
-        console.print()
+# Подготовка таблицы для отображения
+num_columns = 3
+rows = [function_list[i:i + num_columns] for i in range(0, len(function_list), num_columns)]
 
-        try:
-            choice = console.input(
-                "[bold white]>> [/]"
-            )
+# Границы таблицы
+top_border = "╔" + "═" * 34 + "╦" + "═" * 34 + "╦" + "═" * 34 + "╗"
+bottom_border = "╚" + "═" * 34 + "╩" + "═" * 34 + "╩" + "═" * 34 + "╝"
 
-            while not choice.isdigit():
-                choice = console.input(
-                    "[bold white]>> [/]"
-                )
-        except KeyboardInterrupt:
-            console.print("[bold white]До свидания![/]")
-            break
+# Построение таблицы
+table_lines = [top_border]
+for row in rows:
+    row_line = "║"
+    for item in row:
+        row_line += f" {item:<32}║"  # Выравнивание по ширине 34
+    # Добавляем пустые ячейки, если элементов в строке меньше колонок
+    for _ in range(num_columns - len(row)):
+        row_line += f" {'':<32}║"
+    table_lines.append(row_line)
+# Добавляем нижнюю границу
+table_lines.append(bottom_border)
 
-        else:
-            choice = int(choice) - 1
+# Отображение таблицы
+centered_menu = Align.center("\n".join(table_lines))
+console.print(centered_menu)
 
-        try:
-            functions_storage.execute(choice)
-        except KeyboardInterrupt:
-            pass
+# Основной цикл взаимодействия
+while True:
+    console.print()
+
+    try:
+        choice = console.input("[bold white]>> [/]")
+        while not choice.isdigit():
+            choice = console.input("[bold white]>> [/]")
+
+        choice = int(choice) - 1  # Преобразуем к 0-based индексу
+
+        functions_storage.execute(choice)
+
+    except IndexError:
+        console.print("[bold red]Неверный выбор. Попробуйте снова.[/]")
+    except KeyboardInterrupt:
+        console.print("\n[bold white]До свидания![/]")
+        break
+    except Exception as e:
+        console.print(f"[bold red]Ошибка:[/] {e}")

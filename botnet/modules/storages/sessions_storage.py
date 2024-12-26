@@ -12,6 +12,7 @@ from modules.types.json_session import JsonSession
 
 console = Console()
 
+DEBUG_MODE = False  # Включить/выключить отладочные сообщения
 
 class SessionsStorage:
     def __init__(self, directory: str, api_id: Union[str, int], api_hash: str):
@@ -19,7 +20,7 @@ class SessionsStorage:
         self.json_sessions: List[JsonSession] = []
         self.jsessions_paths: Dict[str, JsonSession] = {}
 
-        self.initialize = True if input("Запустить сессии? (y/n) ") == "y" else False
+        self.initialize = True  # Статическое значение для автоматического запуска сессий
 
         for file in os.listdir(directory):
             if file.endswith(".session"):
@@ -55,9 +56,9 @@ class SessionsStorage:
                 ):
                     old_session_path = self.get_json_session_path(old_session)
 
-                    console.print(
-                        f"[bold yellow]ВНИМАНИЕ:[/] Одни и те же аккаунты в ботнете — {old_session_path} совпадает с {session_path}"
-                    )
+                    if DEBUG_MODE:
+                        # Логирование отключено
+                        pass
 
                     continue
 
@@ -95,8 +96,7 @@ class SessionsStorage:
                 )
 
     async def check_session(self, session: TelegramClient, path: str):
-        console.log(f"Initializing session {path}")
-
+        # Логирование отключено
         try:
             await session.connect()
         except ConnectionError:
@@ -104,25 +104,23 @@ class SessionsStorage:
             
             if json_session is not None:
                 if json_session.account.proxy is not None:
-                    return console.log(
-                        f"Ошибка при подключении к сессии {path}. Возможно прокси {json_session.account.proxy.ip} не работает?"
-                    )
+                    return  # Логирование отключено
 
-            console.log(f"Error with connection to session {path}")
+            # Логирование отключено
 
         except Exception as err:
-            console.log(f"Сессия {path} выдала ошибку. {err}. Удаляю.")
+            # Логирование отключено
             del self.full_sessions[path]
             os.remove(path)
             return
 
         if not await session.is_user_authorized():
-            console.log(f"Сессия {path} не работает. Удаляю её")
+            # Логирование отключено
             del self.full_sessions[path]
             os.remove(path)
             return
 
-        console.log(f"Initialized {path}")
+        # Логирование отключено
 
     def get_session_path(self, session: TelegramClient | JsonSession) -> str:
         for path, client in self.full_sessions.items():

@@ -1,0 +1,26 @@
+{
+    "auth_key": "1BJWap1wBu2__QNHdoyVI18MPO8xsroNEcLQ4FdKips3FResGHIp1__6-9L4kOCKkUT-xhKBXQap6Eb4hiDPGsk-sloVVZMu8Ks3pwFF8jIsxSxqY_8ZyRS5D-4CKro3tzpr0fPXwBxwAVmt0xqIcYAeJ7TBSai2h_eMr36z_4A6AcB1Y2CBSaz7kzCnAPY6iT6CEBSdmFSraE0hgCoAplqQoPc-AF7WUHtu3TxiAkKHxc1WRrfAPwPWF-7DDGcHwFsSDXBbbNIsIMQCrlbdjR_WufK1m0VWTuL-FAtmNOLvnpOoSoeTckgqQCE_n2A8bzCOCwEtoy637ERhVyJ3_ShF5lmBtw_k=",
+    "account": {
+        "first_name": "Daria",
+        "last_name": null,
+        "user_id": 7493505546,
+        "added_at": 1735134083.04865,
+        "phone_number": "447342097953"
+    },
+    "application": {
+        "api_id": 2040,
+        "api_hash": "b18441a1ff607e10a989891a5462e627",
+        "device_name": "PC 64bit",
+        "app_version": "4.0.2 x64",
+        "sdk": "Linux LXDE Wayland glibc 2.33",
+        "lang_pack": "tdesktop",
+        "system_lang_code": "af"
+    },
+    "proxy": {
+        "proxy_type": "socks5",
+        "ip": "194.233.150.37",
+        "port": 50101,
+        "user": "primakmeri",
+        "password": "e5iJcz9qaM"
+    }
+}

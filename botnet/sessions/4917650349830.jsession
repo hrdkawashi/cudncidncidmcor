@@ -1,0 +1,26 @@
+{
+    "auth_key": "1ApWapzMBuy1umUMUEANDz26UN0u6zKQpndf19FMwl4NyY7I317bQiYmXXnjR7FE6YmacJsWh7LsuoDrSArYefLBQebghbVwB2FUssMUJdFuA5uP3aDRDd6U5D4OSNiJtFjE30COQR4q6qUjyxBaXjtYpKln7-XbKO8jK378eKrzd8kQeLTfCApFTkY5liDVf1NTrR3tt7FqSt4aYmmGuRCacZefxjht763Eq3x86MPUEX8NFMDlLItnZ234D-TmyNmU11bw4OjgkTOuWJGcMez-i9hctsHoV4V5wF9lV7gJqsafGU6WY0zTzzlLPALaJG-D708LGwB5uN8W9ZiC5d9IYXm1pSv0=",
+    "account": {
+        "first_name": "reminisce",
+        "last_name": null,
+        "user_id": 8151054319,
+        "added_at": 1735133935.943709,
+        "phone_number": "4917650349830"
+    },
+    "application": {
+        "api_id": 2040,
+        "api_hash": "b18441a1ff607e10a989891a5462e627",
+        "device_name": "PC 64bit",
+        "app_version": "3.7.3 x64",
+        "sdk": "Linux bspwm XWayland glibc 2.35",
+        "lang_pack": "tdesktop",
+        "system_lang_code": "pl"
+    },
+    "proxy": {
+        "proxy_type": "socks5",
+        "ip": "194.233.150.37",
+        "port": 50101,
+        "user": "primakmeri",
+        "password": "e5iJcz9qaM"
+    }
+}

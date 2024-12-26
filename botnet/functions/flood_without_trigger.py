@@ -7,7 +7,7 @@ console = Console()
 
 
 class FloodWithoutTriggerFunc(TelethonFunction):
-    """Спам без триггеров(asyncio)"""
+    """Спам без триггеров"""
 
     async def execute(self):
         link = console.input("[bold red]Ссылка> [/]")
